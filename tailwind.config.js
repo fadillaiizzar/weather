@@ -11,8 +11,9 @@ export default {
         sun: "#FFB84C",    // ☀️ Sunny - oranye keemasan pastel
         cream: "#FFF8E7",  // background umum - krem lembut
       },
-      
-
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'], // Daftarkan font Poppins
+      },
     },
   },
   plugins: [],
