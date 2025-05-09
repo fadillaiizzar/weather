@@ -34,19 +34,17 @@ export default function CardWeather({city}) {
     const bgColor = getBgColor(status);
 
     return(
-        <div className={`${bgColor} h-36 rounded-3xl`}>
-        <div className='flex justify-around py-6 items-center h-full'>
-            <div className=''>
-            <p className='text-lg font-bold'>{weather.name}</p>
-            <p className='mb-2'>{status}</p>
-            <p className='text-4xl font-bold'>{Math.round(temp)}°</p>
+        <div className={`${bgColor} h-36 rounded-3xl cursor-pointer`}>
+            <div className='flex justify-around py-6 items-center h-full'>
+                <div className=''>
+                <p className='text-lg font-bold'>{weather.name}</p>
+                <p className='mb-2'>{status}</p>
+                <p className='text-4xl font-bold'>{Math.round(temp)}°</p>
+                </div>
+                <div>
+                    <img src={Icon} alt={status} className="w-28 h-28" />            
+                </div>
             </div>
-            <div>
-            <Icon 
-                size={100}
-            />
-            </div>
-        </div>
         </div>
     );
 }
@@ -60,11 +58,11 @@ function getStatus(temp) {
 function getIcon(status) {
     switch (status) {
         case "Rainy":
-            return CloudHail;
+            return "/image/rainy.png";
         case "Sunny":
-            return SunMedium;
+            return "/image/sun.png";
         default:
-            return CloudSun;
+            return "/image/cloudy.png";
     }
 }
 
