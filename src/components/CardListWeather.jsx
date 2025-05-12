@@ -54,7 +54,7 @@ export default function CardListWeather() {
                     {visibleCities.length > 0 ? (
                         visibleCities.map((city) => (
                             <Link key={city} to={`/detail/${city}`}>
-                                <CardWeather city={city} /> {/* Memanggil CardWeather */}
+                                <CardWeather city={city} /> 
                             </Link>
                         ))
                     ) : (
@@ -68,7 +68,7 @@ export default function CardListWeather() {
                             onClick={handleToggle}
                             className="flex items-center gap-2 text-blue-700 font-medium transition-all"
                         >
-                            <span>{isExpanded ? "Show less" : "See more"}</span>
+                            <span>{isExpanded ? "show less" : "see more"}</span>
                             {isExpanded ? <ChevronUp /> : <ChevronDown />}
                         </button>
                     </div>

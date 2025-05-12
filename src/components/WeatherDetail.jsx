@@ -26,8 +26,8 @@ export default function WeatherDetail() {
     if (!weather) return <div className='p-10'>Loading...</div>;
 
     const temp = weather.main.temp;
-    const status = getStatus(temp);  // Menyesuaikan status berdasarkan suhu
-    const Icon = getIcon(status); // Menyesuaikan ikon berdasarkan status
+    const status = getStatus(temp);  
+    const Icon = getIcon(status); 
 
     const date = new Date(weather.dt * 1000).toLocaleDateString();
     const time = new Date(weather.dt * 1000).toLocaleTimeString();
